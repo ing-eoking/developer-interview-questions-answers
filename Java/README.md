@@ -51,6 +51,8 @@
 <summary style="font-size:20px">JVM 메모리(Runtime Data Area) 구조</summary>
 <div markdown="1">
 
+#### JVM 구조
+
   * 크게 `메소드 영역, JVM 스택, JVM 힙`으로 나뉘며 JVM 힙은 `Young Generation, Old Generation`으로 나뉘고 Young Generation은 `Eden, Survivor0, Survivor1`으로 나뉨
 
 #### Method Area
@@ -123,6 +125,8 @@ public class Test{
 <details>
 <summary style="font-size:20px">Garbage Collection 동작 방식</summary>
 <div markdown="1">
+
+#### GC
 
 * 새롭게 생성된 객체는 `Heap`의 `Young Generation의 Eden 영역`에 저장
 * `Eden 영역이 다 차면 Minor GC`가 발생하여 참조 횟수에 따라 증가하는 `age bit`를 보고 불필요한 객체를 삭제하고 생존한 객체는 `S0`으로 이동
@@ -213,6 +217,7 @@ public interface Interface {
 <summary style="font-size:20px">Collection Framework</summary>
 <div markdown="1">
 
+#### JAVA Collection
 * 데이터를 효율적으로 관리할 수 있는 자료구조와 알고리즘을 구조화하여 클래스로 구현한 것
 * `List, Set, Map 인터페이스`가 존재
   * Collection Interface -> List, Set
@@ -443,6 +448,8 @@ List<Integer> ii; //가능
 <summary style="font-size:20px">String, StringBuilder, StringBuffer</summary>
 <div markdown="1">
 
+#### String, StringBuilder, StringBuffer 특성
+
 * String: `불변성`, StringBuilder/StringBuffer: `가변성`
 
 #### String
@@ -630,6 +637,18 @@ SubClass sub = (SubClass)super;
 * 인터페이스에 default 메소드, static 메소드 추가
 * stream API: 데이터의 추상화
 * java.time 패키지: Joda-Time을 이용한 새로운 날짜와 시간 API
+
+</div>
+</details>
+
+<details>
+<summary style="font-size:20px"> Call by Value vs Call by Reference</summary>
+<div markdown="1">
+
+* `값을 복사`를 하여 처리하는지 `직접 참조`하는지의 차이
+* Call by Value: 인자로 받은 값을 복사하여 처리
+* Call by Reference: 인자로 받은 값의 주소를 참조하여 직접 값에 영향을 줌
+* JAVA에서는 모든 전달 방식이 Call by value로 Call by reference는 해당 객체의 주소값을 직접 넘기는 게 아닌 객체를 보는 또 다른 주소값을 만들어서 넘김
 
 </div>
 </details>

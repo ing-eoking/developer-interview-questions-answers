@@ -1,24 +1,6 @@
 # Web
 
-<details>
-<summary style="font-size:20px">웹 브라우저에 URL을 입력했을 때의 수행 과정</summary>
-<div markdown="1">
-
-* 사용자의 PC는 `DHCP 서버`에서 사용자 `자신의 IP 주소`, `가장 가까운 라우터의 IP 주소`, `가장 가까운 DNS서버의 IP 주소`를 받음
-* `DNS` 서버로 쿼리를 전송해 URL의 `IP 주소`를 응답받음
-  * `ARP`를 이용하여 가장 가까운 라우터의 IP 주소로 MAC 주소를 얻어 요청 전송
-* TCP Socket을 통해 웹 서버와 `3-Way Hand Shaking`을 하여 연결
-* `HTTP Request`가 TCP Socket을 통해 보내지고, 응답으로 웹페이지의 정보가 사용자의 PC에 전달
-
-#### 참고
-* DHCP: IP 주소 및 TCP/IP 설정을 클라이언트에 자동으로 제공하는 프로토콜
-* DNS: IP 주소와 도메인의 매핑 정보를 관리하는 프로토콜
-* ARP: IP 주소를 물리 주소로 변환하는 프로토콜
-* IP 주소: 컴퓨터 마다 부여된 고유의 주소, 변할 수 있음
-* MAC 주소: NIC 카드 마다 부여된 네트워크 장비 고유의 주소, 변하지 않음
-
-</div>
-</details>
+<br>
 
 
 <details>
@@ -117,9 +99,8 @@
 <summary style="font-size:20px">HTTP와 HTTPS의 차이</summary>
 <div markdown="1">
 
-* 웹 브라우저와 웹 서버가 통신하기 위한 프로토콜
-
 #### HTTP
+* 웹 브라우저와 웹 서버가 통신하기 위한 프로토콜
 * 평문 통신으로 `도청` 가능
   * 암호화하지 않음
 * 통신 상대를 확인하지 않아 `위장` 가능
@@ -201,7 +182,7 @@
 * 웹 서버와 통신 시, 인증기관의 `개인키`로 서명된 인증서를 클라이언트가 받으면 인증기관의 `공개키`로 복호화 가능
 
 #### 참고 2
-* SSL을 사용하면 `https://` 를 사용하여 웹서버에 접근
+* SSL을 사용하면 `https://` 를 사용하여 웹서버에 접근 가능
 * 대칭키: 실제 데이터 암호화 방식
 * 공개키: 대칭키를 공유하기 위해 사용
 
@@ -265,7 +246,7 @@
 <summary style="font-size:20px">캐시</summary>
 <div markdown="1">
 
-* 리소스 들의 임시 저장소
+* 리소스들의 임시 저장소
 * 이미지나 css, js파일 등을` 브라우저나 서버 앞 단에 저장`해놓고 사용하는 것
 * 같은 자원을 로드(load)해야할 때, 해당 자원을 다시 불러오지 않고 캐시되어 있는 자원을 사용
   * `서버를 거치지 않아 속도 향상`
@@ -278,6 +259,8 @@
 <details>
 <summary style="font-size:20px">웹 캐시</summary>
 <div markdown="1">
+
+#### 웹 캐시
 
 * 대부분의 브라우저에서는 `HTTP 헤더`에 캐시 구현이 포함되어 있어서 웹 캐시를 구현
 * 응답 헤더의 Last-Modified, Etag, Expires, Cache-Control 항목 등과 같은 여러 부분의 여러 개의 태그를 통해서 캐싱
@@ -309,10 +292,12 @@
 
 #### 웹 서버
 * Http 프로토콜을 기반으로, 클라이언트의 요청을 처리하는 서버
+* html이나 css 같은` 정적 컨텐츠`를 내려주거나 부하분산을 위한 프록시 역할을 주로 함
 * `정적 컨텐츠`만 처리하는 고성능 서버
 
 #### 웹 애플리케이션 서버
 * 보통 웹서버 뒤에서 DB 조회 및 다양한 로직 처리 요구 시, `동적 컨텐츠`를 처리하는 서버
+* tomcat, netty
 
 </div>
 </details>
@@ -345,6 +330,8 @@
 <details>
 <summary style="font-size:20px">REST (Representational State Transfer)</summary>
 <div markdown="1">
+
+#### REST
 
 * 자원을 `이름(표현)`으로 구분하여 자원의 `상태(정보)`를 주고 받는 것
 * `HTTP URI`를 통해 자원을 구분하고 `HTTP Method(POST, GET, PUT, DELETE)`를 통해 해당 자원에 대한 `CRUD` 연산을 적용
@@ -394,28 +381,6 @@
 * HATEOAS
 </div>
 </details>
-
-
-<details>
-<summary style="font-size:20px">REST API: HATEOAS</summary>
-<div markdown="1">
-
-* Hypermedia As The Engine Of Application State
-* 가능한 작업의 링크를 응답에 추가적으로 제공, 클라이언트가 어떤 작업을 할 수 있는지 알 수 있음
-  * `_links`
-
-#### 장점
-* 서버에서 URL을 바꿔도 클라이언트에 영향 없음
-
-#### 단점
-* 전달 데이터 양 증가 및 복잡도 증가
-
-#### HATEOAS가 좋은지 의문점은 여전히 있음
-* https://soobindeveloper8.tistory.com/646
-
-</div>
-</details>
-
 
 <details>
 <summary style="font-size:20px">REST (API) 장단점</summary>
@@ -550,33 +515,12 @@ PUT /new/3
 
 
 <details>
-<summary style="font-size:20px">JWT (JSON Web Token) (추가 예정)</summary>
+<summary style="font-size:20px">JWT (JSON Web Token)</summary>
 <div markdown="1">
 
 * `Json` 포맷을 이용하여 사용자에 대한 속성을 저장하는 Claim 기반의 Web Token
 * Header, Payload, Signature로 구성
 * 세션은 사용자의 수 만큼 서버 메모리를 차지하기 때문에, 최근에는 세션의 문제를 보완한 토큰 기반의 인증방식을 사용하는 추세
-
-</div>
-</details>
-
-
-<details>
-<summary style="font-size:20px">웹 브라우저에 HTTP 응답이 랜더링되는 과정 (추가 예정)</summary>
-<div markdown="1">
-
-</div>
-</details>
-
-
-<details>
-<summary style="font-size:20px">웹 서비스 동작 원리 (추가 예정)</summary>
-<div markdown="1">
-
-* 헬로 월드가 출력되는 방법
-* 클라이언트와 서버의 요청과 응답
-* 브라우저가 클라이언트, 스프링 부트가 서버
-* 로컬호스트의 8080포트에 톰캣이 수행
 
 </div>
 </details>

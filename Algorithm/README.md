@@ -6,6 +6,8 @@
 <summary style="font-size:20px">시간 복잡도와 공간 복잡도</summary>
 <div markdown="1">
 
+#### 표기법
+
 * 주로 `빅오 표기법`으로 표현
 
 #### 시간 복잡도
@@ -320,14 +322,6 @@
 * 전위 순회(Pre-order): root 방문 -> 왼쪽 서브트리 방문 -> 오른쪽 서브트리 방문
 * 중위 순회(In-order): 왼쪽 서브트리 방문 -> root 방문 -> 오른쪽 서브트리 방문
 * 후위 순회(Post-order): 왼쪽 서브트리 방문 -> 오른쪽 서브트리 방문 -> root 방문
-
-</div>
-</details>
-
-<details>
-<summary style="font-size:20px">각 정렬이 언제 사용되는 가 (추가 예정)</summary>
-<div markdown="1">
-
 
 </div>
 </details>

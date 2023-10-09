@@ -1,14 +1,6 @@
 # 기타 
 
-<details>
-<summary style="font-size:20px">컴파일 언어와 스크립트 언어의 차이</summary>
-<div markdown="1">
-
-* `컴파일 언어`는 컴파일러를 통해 사전에 컴파일 되어 기계어 상태로 실행되고 `스크립트 언어`는 컴파일 단계 없이 인터프리터에 의해 실행 단계해서 한 줄씩 기계어로 번역하여 실행
-* 일반적으로 컴파일 언어가 스크립트 언어에 비해 빠르고 안정적임
-
-</div>
-</details>
+<br>
 
 
 <details>
@@ -175,22 +167,6 @@
 </details>
 
 
-<details>
-<summary style="font-size:20px">프레임워크와 플랫폼의 차이</summary>
-<div markdown="1">
-
-* 서비스를 제공하는 플랫폼을 구현하기 위해서는 기능을 모아놓은 프레임워크를 사용
-
-#### 프레임워크
-* 소프트웨어가 개발될 수 있는 뼈대
-* 특정 기능 구현에 사용되는 라이브러리를 포함, SW를 개발할때 재사용할 수 있도록 하는 것
-
-#### 플랫폼
-* 소프트웨어가 실행되는 환경과 설정
-
-</div>
-</details>
-
 
 <details>
 <summary style="font-size:20px">Git에서 merge와 rebase의 차이</summary>
@@ -211,53 +187,6 @@
 * 비동기 통신으로 메시지를 빠르게 교환
 * Producer가 메시지를 큐에 넣으면 Consumer가 메시지를 가져와 처리
 * 예) Kafka, Rabbit MQ, AMPQ 
-
-</div>
-</details>
-
-
-<details>
-<summary style="font-size:20px">기타 추가 사항</summary>
-<div markdown="1">
-
-* HDFS
-  
-* 하둡 에코 시스템
-  
-* 주키퍼의 지노드에 저장되는 데이터
-  
-* Hot Warm 아키텍처
-
-* Spark의 RDD
-
-* nginx 설정에서 성능을 높이는 방법
-  
-* 적정 샤드의 개수를 정하는 방법
-  
-* ElasticSearch에서 마스터가 하는 역할
-  
-* 카프카
-  
-* flume과 logstash의 역할
-  
-* 리눅스의 파일 권한
-
-* Jquery 사용 이유
-
-*  DES128/256 차이
-
-*  HTML5와 HTML 차이
-
-* 검색엔진
-
-* OAuth
-
-* CORS란?
-
-* CORS 해결방법
-
-* JSON, XML의 차이
-  * JSON 종료 태그를 사용하지 않음, 데이터를 더 빨리 읽고 쓸수 있음
 
 </div>
 </details>
